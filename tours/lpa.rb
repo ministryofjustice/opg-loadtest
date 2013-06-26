@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'webrat'
+require 'tourist'
+
 module Webrat
   class Session
     def basic_auth(user, pass)
@@ -18,9 +22,9 @@ OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 class Lpa < Tourist
   def tour_homepage
   	basic_auth("beta", "beta")
-    visit "https://lastingpowerofattorney.service.gov.uk/user/login"
-    fill_in "Email address", :with => "james@abscond.org"
-    fill_in "Password", :with => "loadtesting1"
+    visit "https://lpatest.dsd.io/user/login"
+    fill_in "Email address", :with => "load@cr3.io"
+    fill_in "Password", :with => "asdzxc1"
     click_button "Sign in"
     click_link "Create a new LPA"
 

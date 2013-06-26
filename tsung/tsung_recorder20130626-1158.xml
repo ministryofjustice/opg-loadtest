@@ -1,0 +1,49 @@
+<session name='rec20130626-1158' probability='100'  type='ts_http'>
+
+<request><http url='http://lpatest.dsd.io/' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='1'/>
+
+<request><http url='http://lpatest.dsd.io/user/login' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='6'/>
+
+<request><http url='http://lpatest.dsd.io/user/login' version='1.1'  contents='email=m%40cr3.io&amp;password=asdzxc1&amp;submit=Sign+in' content_type='application/x-www-form-urlencoded' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='/user/dashboard' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='1'/>
+
+
+<thinktime random='true' value='3'/>
+
+<request><http url='http://lpatest.dsd.io/user/account' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='http://lpatest.dsd.io/js/zxcvbn.js?_=1372244328227' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+
+<thinktime random='true' value='6'/>
+
+<request><http url='http://lpatest.dsd.io/user/account' version='1.1'  contents='title=Mr&amp;firstname=John&amp;middlename=James&amp;surname=Smith&amp;dob%5Bday%5D=01&amp;dob%5Bmonth%5D=02&amp;dob%5Byear%5D=1983&amp;addr1=102+Petty+France&amp;addr2=&amp;addr3=&amp;town=London&amp;postcode=SW1+7NP&amp;county=&amp;country=UK&amp;cur_password=asdzxc1&amp;submitdetails=Save+your+details' content_type='application/x-www-form-urlencoded' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='http://lpatest.dsd.io/js/zxcvbn.js?_=1372244349485' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='http://lpatest.dsd.io/user/dashboard' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='1'/>
+
+</session>
