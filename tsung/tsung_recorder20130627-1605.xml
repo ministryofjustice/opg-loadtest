@@ -1,0 +1,3 @@
+<session name='rec20130627-1605' probability='100'  type='ts_http'>
+<request><http url='http://lastingpowerofattornet.service.gov.uk/' version='1.1' method='GET'></http></request>
+</session>

@@ -1,3 +1,6 @@
 
 .DS_Store
 *~
+/tsung/log
+/tsung/erl_crash.dump
+*.pyc

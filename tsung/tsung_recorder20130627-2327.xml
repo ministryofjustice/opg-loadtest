@@ -1,0 +1,116 @@
+<session name='rec20130627-2327' probability='100'  type='ts_http'>
+<request><http url='http://lpatest.dsd.io/' version='1.1' method='GET'></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.min.js' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/js/application.min.js' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/css/styles.css' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/images/gov.uk_logotype-2x.png' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/images/pictogram-create-lpa.png' version='1.1' if_modified_since='Mon, 10 Jun 2013 15:02:19 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/images/pictogram-register-lpa.png' version='1.1' if_modified_since='Mon, 10 Jun 2013 15:02:19 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/images/pictogram-sign-lpa.png' version='1.1' if_modified_since='Mon, 10 Jun 2013 15:02:19 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='http://lpatest.dsd.io/user/login' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='5'/>
+
+<request><http url='http://lpatest.dsd.io/user/login' version='1.1'  contents='email=m%40cr3.io&amp;password=asdzxc1&amp;submit=Sign+in' content_type='application/x-www-form-urlencoded' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='/user/dashboard' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='http://lpatest.dsd.io/user/account' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/js/pwstrength.js' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='15'/>
+
+<request><http url='http://lpatest.dsd.io/user/account' version='1.1'  contents='title=Jr&amp;firstname=John&amp;middlename=James&amp;surname=Smith&amp;dob%5Bday%5D=01&amp;dob%5Bmonth%5D=02&amp;dob%5Byear%5D=1983&amp;addr1=102+Petty+France&amp;addr2=&amp;addr3=&amp;town=London&amp;postcode=SW1+7NP&amp;county=&amp;country=UK&amp;cur_password=asdzxc1&amp;submitdetails=Save+your+details' content_type='application/x-www-form-urlencoded' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='2'/>
+
+
+<request><http url='http://lpatest.dsd.io/user/dashboard' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='1'/>
+
+
+<request><http url='http://lpatest.dsd.io/forward/newlpa' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/create/lpa-type' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='4'/>
+
+<request><http url='http://lpatest.dsd.io/create/lpa-type' version='1.1'  contents='lpa_type=Health+and+welfare&amp;save=Save+and+continue' content_type='application/x-www-form-urlencoded' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='1'/>
+
+<request><http url='/create/donor' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/images/icon/progress-tick.png' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='4'/>
+
+<request><http url='http://lpatest.dsd.io/create/add-donor' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/images/ajax-loader.gif' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/images/icon/person.png' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='http://lpatest.dsd.io/service/getdetails/user' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='/create/add-donor' version='1.1'  contents='title=Jr&amp;firstname=John&amp;middlename=James&amp;surname=Smith&amp;othername=&amp;dob%5Bday%5D=01&amp;dob%5Bmonth%5D=02&amp;dob%5Byear%5D=1983&amp;phone=&amp;email=m%40cr3.io&amp;address%5Baddr1%5D=102+Petty+France&amp;address%5Baddr2%5D=&amp;address%5Baddr3%5D=&amp;address%5Btown%5D=London&amp;address%5Bcounty%5D=&amp;address%5Bpostcode%5D=SW1+7NP&amp;address%5Bcountry%5D=UK&amp;donor_cannot_sign=0' content_type='application/x-www-form-urlencoded; charset=UTF-8' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='/create/donor' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='http://lpatest.dsd.io/js/application.min.js' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='http://lpatest.dsd.io/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.min.js' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='30'/>
+
+
+<thinktime random='true' value='895'/>
+
+<request><http url='http://lpatest.dsd.io/create/donor' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='http://lpatest.dsd.io/images/gov.uk_logotype-2x.png' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='http://lpatest.dsd.io/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.min.js' version='1.1' if_modified_since='Wed, 26 Jun 2013 08:54:40 GMT' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+    <!-- http://lpatest.dsd.io/pdf/draft/Lasting-Power-of-Attorney-Draft.pdf -->

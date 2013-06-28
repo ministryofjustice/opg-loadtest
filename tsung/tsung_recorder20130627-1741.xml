@@ -1,0 +1,18 @@
+<session name='rec20130627-1742' probability='100'  type='ts_http'>
+<request><http url='/' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='5'/>
+
+<request><http url='http://lpatest.dsd.io/forward/newlpa' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/create/lpa-type' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='/user/register' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='30'/>
+
+<request><http url='http://lpatest.dsd.io/user/register' version='1.1'  contents='email=m%40cr3.io&amp;email_confirm=m%40cr3.io&amp;password=asdzxc1&amp;password_confirm=asdzxc1&amp;confirmUnderstanding=1&amp;submit=I+understand' content_type='application/x-www-form-urlencoded' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+</session>

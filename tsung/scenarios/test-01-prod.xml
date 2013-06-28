@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE tsung SYSTEM "/usr/local/Cellar/tsung/1.4.2/share/tsung/tsung-1.0.dtd">
+<tsung loglevel="notice" version="1.0">
+
+  <!-- Client side setup -->
+  <clients>
+    <client host="localhost" use_controller_vm="true"/>
+  </clients>
+  
+  <!-- Server side setup -->
+<servers>
+  <server host="lastingpowerofattorney.service.gov.uk" port="443" type="ssl"></server>
+</servers>
+
+  <!-- to start os monitoring (cpu, network, memory). Use an erlang
+  agent on the remote machine or SNMP. erlang is the default --> 
+<!--  <monitoring>
+    <monitor host="myserver" type="snmp"></monitor>
+  </monitoring>-->
+  
+  <load>
+  <!-- several arrival phases can be set: for each phase, you can set
+  the mean inter-arrival time between new clients and the phase
+  duration -->
+   <arrivalphase phase="1" duration="10" unit="minute">
+     <users interarrival="2" unit="second"></users>
+   </arrivalphase>
+  </load>
+
+  <options>
+   <option type="ts_http" name="user_agent">
+    <user_agent probability="80">Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.8) Gecko/20050513 Galeon/1.3.21</user_agent>
+    <user_agent probability="20">Mozilla/5.0 (Windows; U; Windows NT 5.2; fr-FR; rv:1.7.8) Gecko/20050511 Firefox/1.0.4</user_agent>
+   </option>
+  </options>
+
+  <!-- start a session for a http user. the probability is the
+  frequency of this type os session. The sum of all session's
+  probabilities must be 100 -->
+
+ <sessions>
+
+     <session name='login-update-details' probability='100'  type='ts_http'>
+
+<request><http url='https://lastingpowerofattorney.service.gov.uk/' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='1'/>
+
+<request><http url='https://lastingpowerofattorney.service.gov.uk/user/login' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='6'/>
+
+<request><http url='https://lastingpowerofattorney.service.gov.uk/user/login' version='1.1'  contents='email=m%40cr3.io&amp;password=asdzxc1&amp;submit=Sign+in' content_type='application/x-www-form-urlencoded' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='/user/dashboard' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='1'/>
+
+
+<thinktime random='true' value='3'/>
+
+<request><http url='https://lastingpowerofattorney.service.gov.uk/user/account' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+<request><http url='https://lastingpowerofattorney.service.gov.uk/js/zxcvbn.js?_=1372244328227' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+
+<thinktime random='true' value='6'/>
+
+<request><http url='https://lastingpowerofattorney.service.gov.uk/user/account' version='1.1'  contents='title=Mr&amp;firstname=John&amp;middlename=James&amp;surname=Smith&amp;dob%5Bday%5D=01&amp;dob%5Bmonth%5D=02&amp;dob%5Byear%5D=1983&amp;addr1=102+Petty+France&amp;addr2=&amp;addr3=&amp;town=London&amp;postcode=SW1+7NP&amp;county=&amp;country=UK&amp;cur_password=asdzxc1&amp;submitdetails=Save+your+details' content_type='application/x-www-form-urlencoded' method='POST'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='2'/>
+
+<request><http url='https://lastingpowerofattorney.service.gov.uk/js/zxcvbn.js?_=1372244349485' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='3'/>
+
+<request><http url='https://lastingpowerofattorney.service.gov.uk/user/dashboard' version='1.1' method='GET'>
+  <www_authenticate userid="beta" passwd="beta" /></http></request>
+
+<thinktime random='true' value='1'/>
+
+</session>
+
+ </sessions>
+</tsung>
